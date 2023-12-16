@@ -5,10 +5,9 @@
 2MHz動作においてROM読み込み、RAM書き込みを0Waitとしました。  
 
 以前のファームウエアでは、合計6本の割り込みを使っていましたが  
-(ALE, ROMread, RAMread, RAMwritem IOread, IOwrite)
-ROMread割り込みをやめてALE割り込みルーチン内でROMread判定  
-することにより、ROMread割り込みオーバーヘッド1回分250nsecを  
-削減できました。  
+(ALE, ROMread, RAMread, RAMwritem IOread, IOwrite)  
+ROMread割り込みをやめてALE割り込みルーチン内でのROMread判定により  
+割り込みオーバーヘッド1回分250nsecを削減できました。  
 
 RAM書き込み0waitの効果と合わせ2.5MHz 1wait(M1サイクル5クロック)よりも  
 2.0MHz 0wait(M1サイクル4クロック)動作の方が高速動作となりました  
